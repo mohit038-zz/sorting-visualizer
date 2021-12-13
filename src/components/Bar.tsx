@@ -1,4 +1,5 @@
 import React from "react";
+import { useControl } from "../contexts/ControlContext";
 
 interface BarProps {
   value: number;
@@ -9,6 +10,14 @@ interface BarProps {
 
 export const Bar: React.FC<BarProps> = React.memo(
   ({ value, currentSwapper, currentBubble, currentSorted }: BarProps) => {
+    const { state } = useControl();
+    const styles = () => {
+      if (state.size < 18) {
+        return {
+          display: "inline",
+        };
+      }
+    };
     return (
       <div
         className={
@@ -24,7 +33,9 @@ export const Bar: React.FC<BarProps> = React.memo(
           height: `${value / 6}rem`,
         }}
       >
-        <span className="bar-value">{value}</span>
+        <span className="bar-value" style={styles()}>
+          {value}
+        </span>
       </div>
     );
   },

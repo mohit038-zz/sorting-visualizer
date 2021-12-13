@@ -1,5 +1,11 @@
-@media (max-width: 40rem) {
-  .bar-value {
-    display: none;
+@media (max-width: 35rem) {
+  .bar {
+    &-value {
+      font-size: 0.5rem;
+      display: none;
+    }
+  }
+  .bar-graph {
+    height: calc(70vh - 6rem);
   }
 }
