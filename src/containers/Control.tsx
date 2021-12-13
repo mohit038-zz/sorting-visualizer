@@ -16,6 +16,10 @@ export const Control: React.FC<ControlProps> = () => {
     bubbleSort(state.array, dispatch, convertSpeed);
   };
   const onSizeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch({
+      type: "setCurrentSorted",
+      payload: [],
+    });
     controlDispatch({ type: "changeSize", payload: parseInt(e.target.value) });
   };
   const onDelayChange = (e: React.ChangeEvent<HTMLInputElement>) => {
