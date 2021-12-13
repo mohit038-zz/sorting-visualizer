@@ -1,0 +1,16 @@
+.bar-graph {
+  background-color: black;
+  height: calc(70vh - 4rem);
+  display: flex;
+  align-items: center;
+  margin: 0 0.8rem;
+  justify-content: center;
+  &-container {
+    flex-direction: row;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+}

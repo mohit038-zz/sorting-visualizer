@@ -1,0 +1,13 @@
+.header {
+  background-color: black;
+  font-size: calc(10px + 2vmin);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &-title {
+    margin: 0rem 1rem;
+    font-size: 1.5rem;
+    color: skyblue;
+  }
+}
